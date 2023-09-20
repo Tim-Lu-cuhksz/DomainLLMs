@@ -7,8 +7,8 @@ Our goal is to analyze the OOD generalizability of domain LLMs and propose ways 
 
 | Name | Base Model | Size | Injecting Stage | Dataset | Evaluation Metric | Domain |
 |---|---|---|---|---|---|---|
-| HuaTuo | LLaMa | 7B | Instruction-tuning | [Chinese medical knowledge graph](https://github.com/king-yyf/CMeKG_tools) | Safety, usability, and smoothness (SUS) | Biomedical |
-|   |   |   |   |   |||
-|   |   |   |   |   |||
+| [HuaTuo](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese/tree/main) | LLaMA | 7B | Instruction-tuning | [Chinese medical knowledge graph](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese/tree/main/data) | Safety, usability, and smoothness (SUS) | Biomedical |
+| [ChatLaw](https://github.com/PKU-YuanGroup/ChatLaw) | OpenLLaMA, BERT | 13B, 33B | Instruction-tuning | [Original legal data, legal regulations, and legal consultation data](https://github.com/PKU-YuanGroup/ChatLaw/tree/main/data) | ELO score | Law |
+| [LaWGPT](https://github.com/pengxiao-song/LaWGPT) | LLaMA | 7B | Pretrained + Intruction-tuning | [Legal Q&A](https://github.com/pengxiao-song/awesome-chinese-legal-resources/tree/main) | n/a | Law |
 |   |   |   |   |   |||
 |   |   |   |   |   |||                      
