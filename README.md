@@ -3,6 +3,10 @@ Domain large language models exhibit better performance compared to the general 
 
 Our goal is to analyze the OOD generalizability of domain LLMs and propose ways to improve the SOTA OOD detection methods for LLMs.
 
+## Our definition of OOD (for domain LLMs)
+Let $\mathcal{D}$ be a dataset of all domains, and $d_i \in \mathcal{D}, i=1...N$, indicates all data related to domain $i$. If a domain large language model $\mathcal{M}$ is specifically pretrained or fine-tuned on $d_i$, then data from domains $d_j$, where $i \neq j$ is considered to be OOD with respect to $\mathcal{M}$.
+
+
 ## A survey on Domain LLMs
 
 | Name | Base Model | Size (para/tok) | Injecting Stage | Training Dataset | Evaluation & Benchmarks (bm) | Domain |
