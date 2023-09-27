@@ -17,6 +17,11 @@ Let $\mathcal{D}$ be a dataset of all domains, and $d_i \in \mathcal{D}, i=1...N
 | [LaWGPT](https://github.com/pengxiao-song/LaWGPT) (Chinese, 5.2k star) | LLaMA | 7B/300k legal QA |Intruction fine-tuning | [Legal Q&A](https://github.com/pengxiao-song/awesome-chinese-legal-resources/tree/main) | n.a. | Law |
 | [LexGPT](https://arxiv.org/pdf/2306.05431v1.pdf) (English) | GPT-J-6B | 6B/291.5GiB |Pretrained | [Pile of Law](https://huggingface.co/datasets/pile-of-law/pile-of-law) | 1. Contract provision classification (LEDGAR dataset //  bm: CaseLaw-BERT); 2. Multiple choice questions (CaseHOLD dataset: holdings of US court cases //  bm: CaseLaw-BERT) | Law |
 | [BloombergGPT](https://arxiv.org/abs/2303.17564) (English) | Bloom | 50B/363B+345B | Pretrained | Web, News, Filings, Press, Bloomberg9, The Pile, C4, Wikipedia | 1. Public financial tasks (public datasets) 2. Bloomberg financial tasks (NER and sentiment analysis) 3. Big-bench Hard (reasoning and general NLP tasks) 4. Knowledge assessments (testing closed-book info recall) 5. Reading comprehension (testing open-book tasks) 6. Linguistic tasks /// Classification, generative, multiple-choice QA /// bm: GPT-NeoX, OPT-66B, BLOOM-176B | Finance |
+| [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) (English + Chinese, 8.6k) | ChatGLM & LLaMA | 6B,7B,13B/1.4T,2T | Pretrained | Financial news, social media, filings, trends, academic datasets | 1. Financial Sentiment Analysis 2. Financial Report Summary /// bm: FPB, FiQA-SA, TFNS, NWGI | Finance |
 |[Minerva](https://arxiv.org/pdf/2206.14858.pdf) (English) | PaLM | 8,62,54B/164,109,26B | Pretrained+fine-tuning | Math web pages, arXiv, general natural language data | 1. Middle school mathematics problem (MATH) 2. Middle school math word problems (GSM8k) 3.STEM problems (MMLU-STEM // multiple-choice for mathematical reasoning // bm: PaLM-8B, PaLM-62B, OpenAI davinci-002, Published SOTA)| Math |               
 
 Note: BioGPT is pre-trained only on in-domain text data. Also, for language indicated in the brackets after the model name is the primary languague that appeared in the pre-training & fine-tuning stage.
+
+
+## Progress
+- Since FinGPT has the greatest Github stars, we try to run experiments using FinGPT (2023 9.26)
