@@ -24,4 +24,4 @@ Note: BioGPT is pre-trained only on in-domain text data. Also, for language indi
 
 
 ## Progress
-- Since FinGPT has the greatest Github stars, we try to run experiments using FinGPT (2023 9.26)
+- Since FinGPT has the greatest Github stars, we try to run experiments using FinGPT (2023 9.26).
