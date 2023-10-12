@@ -9,7 +9,7 @@
 ## Methods
 **Self-Alignment**: utilize the model to improve itself and align its response with desired behaviors.
 
-1. **Self-Augmentation**: Fine-tune LLaMA (base model) on a seed dataset with element $\{instruct_i, output_i\}$ in both directions (*output*->*instruct* & *instruct*->*output*), which yields $M_{yx}$.
+1. **Self-Augmentation**: Fine-tune LLaMA (base model) on a seed dataset with element {$instruct_i, output_i$} in both directions (*output*->*instruct* & *instruct*->*output*), which yields $M_{yx}$.
 
 2. Generate candidate instructions for outputs from unlabelled web corpus.
 
@@ -55,7 +55,7 @@ The paper measures win rates agianst text-davinci-003 via the following two eval
 
 - Joint training with both seed and self-augmented data improves performance.
 
-- Using a combined system prompt $\{S_a, S_w\}$ at inference time is better.
+- Using a combined system prompt {$S_a, S_w$} at inference time is better.
 
 
 ## Conclusion
