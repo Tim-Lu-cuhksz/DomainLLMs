@@ -34,7 +34,7 @@ The paper proposes a way to generate test cases ("red teaming") to test a target
 - Add a loss term to penalize KL divergence between $p_r(x)$ and initial distribution (*to increase diversity*)
 
 ### Test Case Generation
-- Decode the red LM with nucleus sampling
+- Decode the red LM with nucleus sampling (the smallest possible sets of Top-V words such that the sum of their probability is ≥ p)
 - To obtain many generations, sample sequences independently
 
 ### Limitations
