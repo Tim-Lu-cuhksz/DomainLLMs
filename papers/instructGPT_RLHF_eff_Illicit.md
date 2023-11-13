@@ -30,7 +30,7 @@ where K is the number of responses, $r_\theta(x,y)$ is the scalar output of the 
 
 **RL**: The paper maximizes the following objective during training:
 
-$$ obj(\phi)=\mathbb{E}_{(x,y)\sim D_\pi}[r_\theta(x,y)- \beta log(\pi_\phi^{RL}(y|x)/\pi^{SFT}(y|x))]$ + $\gamma \mathbb{E}_{x \sim D_{pretrain}}[log(\pi_\phi^{RL}(x))] $$
+$` obj(\phi)=\mathbb{E}_{(x,y)\sim D_\pi}[r_\theta(x,y)- \beta log(\pi_\phi^{RL}(y|x)/\pi^{SFT}(y|x))]$ + $\gamma \mathbb{E}_{x \sim D_{pretrain}}[log(\pi_\phi^{RL}(x))] `$
 
 where $\pi_\phi^{RL}(x)$ is the learned policy, $\pi_\phi(SFT)$ is the supervised trained model.
 
