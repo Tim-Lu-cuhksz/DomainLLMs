@@ -24,7 +24,7 @@ The prompts are used in the following fine-tuning procedure with demonstrations 
 
 The RM is trained on a dataset of comparisons between two model outputs.
 
-$loss(\theta)=-\frac{1}{K\choose{2}}\mathbb{E}_{(x,y_w,y_l)\sim D}[log(\sigma(r_\theta(x,y_w)-r_\theta(x,y_l)))]$
+$` loss(\theta)=-\frac{1}{K\choose{2}}\mathbb{E}_{(x,y_w,y_l)\sim D}[log(\sigma(r_\theta(x,y_w)-r_\theta(x,y_l)))] `$
 
 where K is the number of responses, $r_\theta(x,y)$ is the scalar output of the reward model for prompt x and completion y.
 
