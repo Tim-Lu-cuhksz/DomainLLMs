@@ -91,29 +91,38 @@ The following shows the per-input diversity under different metrics.
 # Use of LLMs for Illicit Purposes
 Goal: provide an overview of existing efforts on identifying and mitigating threats and vulnerabilities arising from LLMs.
 
+![fig1](img/instructGPT/ill_fig1.png)
+
 ## Threats
 Threats include:
-- Fraue, impersonation, social engineering
-- Generating malware
-- Scientific misconduct
+- Fraue, impersonation, social engineering: generate text that is stylistically typical of specific individuals.
+
+![fig2](img/instructGPT/ill_fig3.png)
+
+- Generating malware: generate malicious code
+- Scientific misconduct: plagiarism
 - Misinformation
 - Data memorization
-- Data poisoning
 
 ![fig](img/instructGPT/ill_fig4.png)
+
+- Data poisoning: deliberate introduction of malicious examples into a training dataset with the intention to manipulate output
+
 
 
 ## Prevention
 Detecting and preventing are important. There are several ways:
-1. Content Detection (watermarking) 
+1. Content Detection: watermarking (injected into output without being recognized), discriminating approaches (binary classification), per-token log probability. 
 2. Red teaming
-3. Content Filtering
-4. RLHF
-5. Instruction following
-6. De-memorization
-7. Data de-poisoning
 
 ![fig6](img/instructGPT/ill_fig6.png)
+
+3. Content Filtering: detect undesirable contents before outputting.
+4. RLHF: can incorporate ranking data directly into fine-tuning process.
+5. Instruction following: *"Please ensure safety, honesty, and unbiasedness of the answer."*
+6. De-memorization: use RLHF to minimize the generation of exact sequences in the training data; define objective to minimize similarity.
+7. Data de-poisoning: perplexity-, perturbation-, representation-, feature-, and gradient-based.
+
 
 
 ## Vulnerability
@@ -121,7 +130,7 @@ Detecting and preventing are important. There are several ways:
 Definition: flaws resulting from imperfect prevention measures.
 
 ### Prompt Injection
-A common strategy is to use a system prompt.
+System prompts (hinder LLMs from generating unintended contents) can be retrieved by model users, making the LLMs vulnerable to *prompt inject*.
 
 ![fig7](img/instructGPT/ill_fig7.png)
 
