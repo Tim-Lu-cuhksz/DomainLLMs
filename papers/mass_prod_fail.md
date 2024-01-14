@@ -62,7 +62,7 @@ This work proposes MULTIMON that produces failures of text-guided multimodal sys
 Possible future directions are:
 1. Employ other properties to induce induce systematic failures
 2. Many semantically different pairs with high DistilRoBERTA similarity are discarded due to low $\tau$ (to avoid duplicates). Come up with other effective ways to resolve the two issues
-3. Based on erroneous agreement, at least one of the inputs must be wrong. How to automatically detect which is wrong without manual checking?
+3. Based on erroneous agreement, at least one of the inputs must be wrong. How to automatically detect which input is wrong without manual checking?
 
 
 
