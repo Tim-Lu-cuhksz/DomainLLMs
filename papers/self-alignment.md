@@ -59,5 +59,5 @@ The paper measures win rates agianst text-davinci-003 via the following two eval
 
 
 ## Conclusion
-The paper proposed a scalable approach to finetuning LLMs to follow instructions. The model outperfoms all other non-distilled instruction-following models on the Alpaca leaderboard.
+The paper proposes a scalable approach to finetuning LLMs to follow instructions. The model outperfoms all other non-distilled instruction-following models on the Alpaca leaderboard.
 
