@@ -110,7 +110,7 @@ Question: the_question_stem
 ###
 You should carefully read the question and understand the paraphrasing mode. Please paraphrase the sentence according the mode and output your result. Do not output any prompts or contents apart from the paraphrased question."""
 
-user_prompt = f'''Please paraphrase the following question based on the mode.
+user_prompt = f'''Please paraphrase the following question based on the given mode.
 ###
 Mode: {some_specific_mode}
 Question: {the_question_stem}
