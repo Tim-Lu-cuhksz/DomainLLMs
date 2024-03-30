@@ -102,7 +102,7 @@ user_prompt = ''' Here are pairs of questions for you to summarize failure patte
 1. Select one of the failure patterns (e.g., "Change in sentence structure") from above and prompt GPT-3.5-turbo to paraphrase the 3k CommonsenseQA questions accordingly.
 We use the following prompt for paraphrasing (let me know if you think the prompt is bad): 
 ```
-# You may adjust the prompt for your own usage
+# Let me know if you think the following prompt is not good enough!!!
 system_prompt = """You are a helpful assistant. You will be given a question and a mode for paraphrasing. An example could be:
 ###
 Mode: some_specific_mode
