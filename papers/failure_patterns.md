@@ -103,12 +103,14 @@ user_prompt = ''' Here are pairs of questions for you to summarize failure patte
 We use the following prompt for paraphrasing (let me know if you think the prompt is bad): 
 ```
 # Let me know if you think the following prompt is not good enough!!!
-system_prompt = """You are a helpful assistant. You will be given a question and a mode for paraphrasing. An example could be:
+system_prompt = """You are a helpful assistant. You will be given a question and a mode with an explanation for paraphrasing. An example could be:
 ###
-Mode: some_specific_mode
+Mode: some_specific_mode: explanation
 Question: the_question_stem
 ###
-You should carefully read the question and understand the paraphrasing mode. Please paraphrase the sentence according the mode and output your result. Do not output any prompts or contents apart from the paraphrased question."""
+You should carefully read the question and understand the paraphrasing mode. Please paraphrase the sentence according the mode and output your result. 
+You should not paraphrase using other modes.
+Do not output any prompts or contents apart from the paraphrased question."""
 
 user_prompt = f'''Please paraphrase the following question based on the given mode.
 ###
@@ -116,6 +118,5 @@ Mode: {some_specific_mode}
 Question: {the_question_stem}
 ###'''
 ```
-
 
 2. Evaluate the paraphrased questions to see the fraction of inconsistent answers (evaluated wrongly/correctly only after paraphrasing)
