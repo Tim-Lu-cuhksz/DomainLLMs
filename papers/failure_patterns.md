@@ -98,7 +98,7 @@ user_prompt = ''' Here are pairs of questions for you to summarize failure patte
 14. Use of different sentence lengths: The paraphrased sentences may use different sentence lengths than the original sentences. For example, a long, complex sentence may
 ```
 
-## What To Do Next?
+## Testing Effectiveness of The Mode
 1. Select one of the failure patterns (e.g., "Change in sentence structure") from above and prompt GPT-3.5-turbo to paraphrase the 3k CommonsenseQA questions accordingly.
 We use the following prompt for paraphrasing (let me know if you think the prompt is bad): 
 ```
@@ -120,3 +120,44 @@ Question: {the_question_stem}
 ```
 
 2. Evaluate the paraphrased questions to see the fraction of inconsistent answers (evaluated wrongly/correctly only after paraphrasing)
+
+## What to do next?
+From previous trials, we found out that the prompt might not be properly designed, resulting in sentences being paraphrased based on multiple modes.
+
+Next, we try to constrain the prompt a little bit.
+
+First, the modes summarized by GPT-4 tend to be too general, we promt GPT-3.5 to give more details. 
+```
+system_prompt: f'''You are a helpful assistant.'''
+
+user_prompt: '''You will be given a specific way of paraphrasing a sentence and its explanation. Please tell me more about this way and give several examples of paraprasing sentences using this way.
+The specific way and explanation is {mode_with_explanation}'''
+```
+
+Once we obtain the result, we would like to use it to improve the prompt in the previous section (both zero-shot and few-shot).
+
+```
+system_prompt = """You are a helpful assistant. You will be given a mode of paraphrasing a sentence and its an explanation. 
+[You will also be given few examples of paraphrasing a sentence using the given mode]
+An example of the format could be:
+###
+Mode: some_specific_mode: explanation
+
+Example 1:
+Original sentence: xxx
+Paraphrased sentence: xxx
+
+... more examples ...
+###
+You should understand the paraphrasing mode properly (from the examples)."""
+
+user_prompt = f'''Please paraphrase the following sentence based on the given mode and output your result.
+You should not paraphrase using other modes.
+Do not output any prompts or contents apart from the paraphrased question
+###
+Mode: {some_specific_mode}
+
+Original sentence: {the_question_stem}
+Paraphrased sentence:
+###'''
+```
