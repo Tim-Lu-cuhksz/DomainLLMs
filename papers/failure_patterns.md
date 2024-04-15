@@ -1,6 +1,17 @@
 # Failure Pattern Analysis for MCQs
 We would like to analyze failure patterns for MCQs evaluated by GPT-3.5-turbo.
 
+## Prompt for Paraphrasing
+We use back translation and GPT-3.5-turbo to paraphrase the question stem.
+
+```
+system_prompt="""You are a helpful assistant. You will be given a sentence and your job is to paraphrase it properly without changing its meaning.
+Please output the paraphrased sentence in the end.
+Do not output anything else apart from the paraphrased sentence."""
+
+user_prompt=f'''Please paraphrase the sentence: [{question}]'''
+```
+
 ## Preliminary Results given by GPT-4
 We use the following prompt (may need modifications in future versions) to analyze the patterns.
 ```
@@ -23,6 +34,49 @@ user_prompt = ''' Here are pairs of questions for you to summarize failure patte
 [q2, q2_paraphrased]
 ...
 ###'''
+```
+
+We would like to redesign the prompt.
+```
+system_prompt='''You are a helpful assistant. You will be given two groups of questions which exhibit different features.
+You should try your best to summarize the differences between questions in the two groups.
+An example could be:
+###
+Group 1:
+[
+{question1},
+{question2},
+...
+]
+
+Group 2:
+[
+{question1},
+{question2},
+...
+]
+###
+'''
+
+user_prompt='''Here are the two groups of questions, based on which you should summarize the differences:
+###
+Group 1:
+[
+{question1},
+{question2},
+...
+]
+
+Group 2:
+[
+{question1},
+{question2},
+...
+]
+###
+You could consider differences from linguistic aspects, length of the questions, etc. 
+The differences you give may include but not limited to the aforementioned ones.
+'''
 ```
 
 
