@@ -294,3 +294,6 @@ In contrast, Group 2 questions are more concise, focused, and to the point. They
 Overall, Group 2 questions are more coherent, concise, and contextually clear compared to the lengthy and convoluted questions in Group 1.
 ```
 The paraphrased sentences are better because the original ones are of poor quality. 
+
+#### Observations
+- The original data may present low quality such that the paraphrased form appears to be better (which is not we expect to see because it prevents us from summarizing the true failure patterns)
